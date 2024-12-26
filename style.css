@@ -1,0 +1,22 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-image: url("img/gambar1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+#About {
+  padding-top: 5rem;
+  background-color: #ffff;
+}
+
+#Products {
+  padding-top: 5rem;
+  background-color: #ffff;
+}
+
+section {
+  padding-top: 5rem;
+}
