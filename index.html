@@ -135,8 +135,14 @@
                     </div>
                     <div class="mb-3">
                       <label for="varian" class="form-label">Varian Rasa</label>
-                      <input type="text" class="form-control" id="varian" aria-describedby="varian" name="varian" />
-                    </div>
+                      <select class="form-select" id="varian" name="varian" required>
+                        <option value="" selected hidden>Pilih varian rasa</option>
+                        <option value="Bolu Coklat">coklat</option>
+                        <option value="Bolu Stroberi">stroberi</option>
+                        <option value="Bolu Pandan">pandan</option>
+                      </select>
+                      <div class="invalid-feedback">Silakan pilih varian rasa.</div>
+                    </div>                                      
                     <div class="mb-3">
                       <label for="jumlah" class="form-label">Jumlah</label>
                       <input type="text" class="form-control" id="jumlah" aria-describedby="jumlah" name="jumlah" />
@@ -187,7 +193,8 @@
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
+      .then(response => console.log('Success!', response)
+    )
       .catch(error => console.error('Error!', error.message))
   })
 </script>
